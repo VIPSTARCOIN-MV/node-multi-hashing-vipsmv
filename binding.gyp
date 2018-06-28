@@ -9,7 +9,7 @@
                 "boolberry.cc",
                 "c11.c",
                 "cryptonight.c",
-				"cryptonight_fast.c",
+		"cryptonight_fast.c",
                 "fresh.c",
                 "fugue.c",
                 "groestl.c",
@@ -26,6 +26,7 @@
                 "x11.c",
                 "x13.c",
                 "x15.c",
+		
                 "sha3/sph_hefty1.c",
                 "sha3/sph_fugue.c",
                 "sha3/aes_helper.c",
