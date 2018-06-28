@@ -8,7 +8,7 @@ extern "C" {
     #include "blake.h"
     #include "c11.h"
     #include "cryptonight.h"
-	#include "cryptonight_fast.h"
+    #include "cryptonight_fast.h"
     #include "fresh.h"
     #include "fugue.h"
     #include "groestl.h"
@@ -25,6 +25,7 @@ extern "C" {
     #include "x11.h"
     #include "x13.h"
     #include "x15.h"
+    #include "vipstar.h"
 }
 
 #include "boolberry.h"
@@ -120,6 +121,7 @@ using namespace v8;
  DECLARE_CALLBACK(x11, x11_hash, 32);
  DECLARE_CALLBACK(x13, x13_hash, 32);
  DECLARE_CALLBACK(x15, x15_hash, 32);
+ DECLARE_CALLBACK(vipstar, vipstar_hash, 32);
 
 
 DECLARE_FUNC(scrypt) {
@@ -313,7 +315,7 @@ DECLARE_INIT(init) {
     NODE_SET_METHOD(exports, "boolberry", boolberry);
     NODE_SET_METHOD(exports, "c11", c11);
     NODE_SET_METHOD(exports, "cryptonight", cryptonight);
-	NODE_SET_METHOD(exports, "cryptonightfast", cryptonightfast);
+    NODE_SET_METHOD(exports, "cryptonightfast", cryptonightfast);
     NODE_SET_METHOD(exports, "fresh", fresh);
     NODE_SET_METHOD(exports, "fugue", fugue);
     NODE_SET_METHOD(exports, "groestl", groestl);
@@ -332,6 +334,7 @@ DECLARE_INIT(init) {
     NODE_SET_METHOD(exports, "x11", x11);
     NODE_SET_METHOD(exports, "x13", x13);
     NODE_SET_METHOD(exports, "x15", x15);
+    NODE_SET_METHOD(exports, "vipstar", vipstar);
 }
 
 NODE_MODULE(multihashing, init)
