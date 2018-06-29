@@ -1,5 +1,5 @@
-#ifndef VIPSTAR_HASH_H
-#define VIPSTAR_HASH_H
+#ifndef VIPSTARHASH_H
+#define VIPSTARHASH_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -11,3 +11,6 @@ void vipstar_hash(const char *input, char *output)
 
 #ifdef __cplusplus
 }
+#endif
+
+#endif
