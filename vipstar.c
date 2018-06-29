@@ -32,6 +32,7 @@
 #include "sysendian.h"
 
 #include "vipstar.h"
+#include "vipstar_hash.h"
 
 /*
  * Encode a length len/4 vector of (uint32_t) into a length len vector of
