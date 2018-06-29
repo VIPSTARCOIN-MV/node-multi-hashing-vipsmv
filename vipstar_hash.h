@@ -1,3 +1,6 @@
+#ifndef VIPSTAR_HASH_H
+#define VIPSTAR_HASH_H
+
 #ifdef __cplusplus
 extern "C" {
 #endif
