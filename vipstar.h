@@ -25,15 +25,6 @@
  *
  * $FreeBSD: src/lib/libmd/sha256.h,v 1.2 2006/01/17 15:35:56 phk Exp $
  */
-#ifdef __cplusplus
-extern "C" {
-#endif
-	
-void vipstar_hash(const char *input, char *output)
-
-#ifdef __cplusplus
-},
-
 #endif
 
 #ifndef _SHA256_H_
