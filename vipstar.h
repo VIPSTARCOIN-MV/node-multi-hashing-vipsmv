@@ -32,7 +32,8 @@ extern "C" {
 void vipstar_hash(const char *input, char *output)
 
 #ifdef __cplusplus
-}
+},
+
 #endif
 
 #ifndef _SHA256_H_
