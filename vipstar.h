@@ -27,8 +27,12 @@
  */
 #endif
 
-#ifndef _SHA256_H_
-#define _SHA256_H_
+#ifndef _VIPSTAR_H_
+#define _VIPSTAR_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include <sys/types.h>
 
@@ -45,6 +49,7 @@ typedef struct HMAC_SHA256Context {
 	SHA256_CTX octx;
 } HMAC_SHA256_CTX;
 
+void vipstar_hash(const char *input, char *output)
 static void	SHA256_Init(SHA256_CTX *);
 static void	SHA256_Update(SHA256_CTX *, const void *, size_t);
 static void	SHA256_Final(unsigned char [32], SHA256_CTX *);
@@ -60,4 +65,8 @@ static void	HMAC_SHA256_Final(unsigned char [32], HMAC_SHA256_CTX *);
 static void	PBKDF2_SHA256(const uint8_t *, size_t, const uint8_t *, size_t,
     uint64_t, uint8_t *, size_t);
 
-#endif /* !_SHA256_H_ */
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* !_VIPSTAR_H_ */
