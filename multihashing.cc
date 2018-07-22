@@ -26,7 +26,6 @@ extern "C" {
     #include "x13.h"
     #include "x15.h"
     #include "vipstar.h"
-    #include "vipstar_hash.h"
 }
 
 #include "boolberry.h"
@@ -122,7 +121,7 @@ using namespace v8;
  DECLARE_CALLBACK(x11, x11_hash, 32);
  DECLARE_CALLBACK(x13, x13_hash, 32);
  DECLARE_CALLBACK(x15, x15_hash, 32);
- DECLARE_CALLBACK(vipstar, vipstar_hash, 32);
+ DECLARE_CALLBACK(vipstar, vipstarcoinhash, 32);
 
 
 DECLARE_FUNC(scrypt) {
