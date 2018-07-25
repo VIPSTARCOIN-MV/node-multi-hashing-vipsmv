@@ -1,6 +1,6 @@
 #include <string.h>
 #include <inttypes.h>
-#include "../vipstar.h"
+#include "vipstar.h"
 
 static inline void sha256d_preextend(uint32_t *W)
 {
