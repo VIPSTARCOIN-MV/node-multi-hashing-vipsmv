@@ -1,7 +1,5 @@
 #include <string.h>
 #include <inttypes.h>
-#include "../miner.h"
-#include "../compat.h"
 #include "../vipstar.h"
 
 static inline void sha256d_preextend(uint32_t *W)
@@ -323,7 +321,7 @@ static inline void sha256d_ms_vips(uint32_t *hash, uint32_t *W,
 	hash[7] += hash[3] + S1(hash[0]) + Ch(hash[0], hash[1], hash[2]) + S[60] + sha256_k[60] + sha256_h[7];
 }
 
- void vipstarcoinhash(void *output, const void *input){
+ void vipstarcoinhash(void *output, const void *input, uint32_t len){
 
 	sha256d_181_swap((uint32_t*)output, (uint32_t*)input);
 }
