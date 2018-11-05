@@ -26,6 +26,7 @@ extern "C" {
     #include "x13.h"
     #include "x15.h"
     #include "vipstar.h"
+    #include "xevan.h"
 }
 
 #include "boolberry.h"
@@ -122,6 +123,7 @@ using namespace v8;
  DECLARE_CALLBACK(x13, x13_hash, 32);
  DECLARE_CALLBACK(x15, x15_hash, 32);
  DECLARE_CALLBACK(vipstar, vipstarcoinhash, 32);
+ DECLARE_CALLBACK(xevan, xevan_hash, 32);
 
 
 DECLARE_FUNC(scrypt) {
@@ -335,6 +337,7 @@ DECLARE_INIT(init) {
     NODE_SET_METHOD(exports, "x13", x13);
     NODE_SET_METHOD(exports, "x15", x15);
     NODE_SET_METHOD(exports, "vipstar", vipstar);
+    NODE_SET_METHOD(exports, "xevan", xevan);
 }
 
 NODE_MODULE(multihashing, init)
