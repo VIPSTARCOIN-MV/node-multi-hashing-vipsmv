@@ -28,6 +28,8 @@
                 "x15.c",
 		"vipstar.c",
                 "xevan.c",
+                "lyra2.c",
+                "lyra2re.c",
                 "sha3/sph_haval.c",
                 "sha3/sph_sha2.c",
                 "sha3/sph_sha2big.c",
