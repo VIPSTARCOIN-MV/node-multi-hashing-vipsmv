@@ -40,7 +40,7 @@
 #include "sha3/sph_skein.h"
 #include "lyra2.h"
 
-void lyra2re_hash(const char* input, char* output)
+void lyra2re_hash(const char *input, char *output, uint32_t len)
 {
     sph_blake256_context     ctx_blake;
     sph_groestl256_context   ctx_groestl;
@@ -57,9 +57,9 @@ void lyra2re_hash(const char* input, char* output)
     sph_keccak256 (&ctx_keccak,hashA, 32); 
     sph_keccak256_close(&ctx_keccak, hashB);
 	
-	LYRA2_old(hashA, 32, hashB, 32, hashB, 32, 1, 8, 8);
+    LYRA2_old(hashA, 32, hashB, 32, hashB, 32, 1, 8, 8);
 	
-	sph_skein256_init(&ctx_skein);
+    sph_skein256_init(&ctx_skein);
     sph_skein256 (&ctx_skein, hashA, 32); 
     sph_skein256_close(&ctx_skein, hashB); 
 
@@ -70,7 +70,7 @@ void lyra2re_hash(const char* input, char* output)
 	memcpy(output, hashA, 32);
 }
 
-void lyra2rev2_hash(const char* input, char* output)
+void lyra2rev2_hash(const char *input, char *output, uint32_t len)
 {
 	sph_blake256_context ctx_blake;
 	sph_cubehash256_context ctx_cubehash;
@@ -109,7 +109,7 @@ void lyra2rev2_hash(const char* input, char* output)
    	memcpy(output, hashA, 32);
 }
 
-void lyra2revc0ban_hash(const char* input, char* output)
+void lyra2revc0ban_hash(const char *input, char *output, uint32_t len)
 {
 	sph_blake256_context ctx_blake;
 	sph_cubehash256_context ctx_cubehash;
