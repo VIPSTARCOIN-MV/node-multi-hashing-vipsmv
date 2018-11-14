@@ -27,6 +27,7 @@ extern "C" {
     #include "x15.h"
     #include "vipstar.h"
     #include "xevan.h"
+    #include "lyra2re.h"
 }
 
 #include "boolberry.h"
@@ -124,7 +125,9 @@ using namespace v8;
  DECLARE_CALLBACK(x15, x15_hash, 32);
  DECLARE_CALLBACK(vipstar, vipstarcoinhash, 32);
  DECLARE_CALLBACK(xevan, xevan_hash, 32);
-
+ DECLARE_CALLBACK(lyra2re, lyra2re_hash, 32);
+ DECLARE_CALLBACK(lyra2rev2, lyra2rev2_hash, 32);
+ DECLARE_CALLBACK(lyra2revc0ban, lyra2revc0ban_hash, 32);
 
 DECLARE_FUNC(scrypt) {
    DECLARE_SCOPE;
@@ -338,6 +341,9 @@ DECLARE_INIT(init) {
     NODE_SET_METHOD(exports, "x15", x15);
     NODE_SET_METHOD(exports, "vipstar", vipstar);
     NODE_SET_METHOD(exports, "xevan", xevan);
+    NODE_SET_METHOD(exports, "lyra2re", lyra2re);
+    NODE_SET_METHOD(exports, "lyra2rev2", lyra2rev2);
+    NODE_SET_METHOD(exports, "lyra2revc0ban", lyra2revc0ban);
 }
 
 NODE_MODULE(multihashing, init)
