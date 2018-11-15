@@ -40,7 +40,7 @@
 #include "sha3/sph_skein.h"
 #include "lyra2.h"
 
-void lyra2re_hash(const char *input, char *output, uint32_t len)
+void lyra2re_hash(const char* input, char* output, uint32_t len)
 {
     sph_blake256_context     ctx_blake;
     sph_groestl256_context   ctx_groestl;
@@ -70,7 +70,7 @@ void lyra2re_hash(const char *input, char *output, uint32_t len)
 	memcpy(output, hashA, 32);
 }
 
-void lyra2rev2_hash(const char *input, char *output, uint32_t len)
+void lyra2rev2_hash(const char* input, char* output, uint32_t len)
 {
 	sph_blake256_context ctx_blake;
 	sph_cubehash256_context ctx_cubehash;
@@ -109,7 +109,7 @@ void lyra2rev2_hash(const char *input, char *output, uint32_t len)
    	memcpy(output, hashA, 32);
 }
 
-void lyra2revc0ban_hash(const char *input, char *output, uint32_t len)
+void lyra2revc0ban_hash(const char* input, char* output, uint32_t len)
 {
 	sph_blake256_context ctx_blake;
 	sph_cubehash256_context ctx_cubehash;
