@@ -59,6 +59,7 @@
                 "crypto/hash.c",
                 "crypto/aesb.c",
                 "crypto/wild_keccak.cpp",
+		"Sponge.c",
             ],
             "include_dirs": [
                 "crypto",
