@@ -148,7 +148,7 @@ void lyra2revc0ban_hash(const char* input, char* output, uint32_t len)
  	memcpy(output, hashA, 32);
 }
 
-void lyra2re3_hash(const char* input, char* output)
+void lyra2rev3_hash(const char* input, char* output, uint32_t len)
 {
     sph_blake256_context ctx_blake;
 	sph_cubehash256_context ctx_cubehash;
