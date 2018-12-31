@@ -160,13 +160,13 @@ void lyra2rev3_hash(const char* input, char* output, uint32_t len)
     sph_blake256(&ctx_blake, input, 144);
     sph_blake256_close (&ctx_blake, hashA);	
 
-    LYRA2_3(hashB, 32, hashA, 32, hashA, 32, 1, 4, 4);
+    LYRA2(hashB, 32, hashA, 32, hashA, 32, 1, 4, 4);
     
     sph_cubehash256_init(&ctx_cubehash);
     sph_cubehash256(&ctx_cubehash, hashB, 32);
     sph_cubehash256_close(&ctx_cubehash, hashA);
     
-    LYRA2_3(hashB, 32, hashA, 32, hashA, 32, 1, 4, 4);
+    LYRA2(hashB, 32, hashA, 32, hashA, 32, 1, 4, 4);
     
     sph_bmw256_init(&ctx_bmw);
     sph_bmw256(&ctx_bmw, hashB, 32);
